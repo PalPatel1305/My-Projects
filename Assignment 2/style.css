@@ -1,0 +1,331 @@
+
+/**  Author: Pal Manojkumar Patel, 000865048,01/06/2022,
+This is Assignment 2 for COMP 10259 course for use of responsive bootstrap and css styling .  **/ 
+
+/**external style sheet**/
+
+main{
+    margin: 0px;
+    padding: 0%;
+}
+/**heading**/
+h1{
+    font: normal 4em 'Playfair Display SC', serif;
+    text-align:center;
+    color:#050801;
+            
+}
+
+/**header**/
+header h1:hover{
+    color: red;
+    transform: scale(1.2);
+    
+}
+header {
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+header img{
+    border-radius: 30px;
+    transition: width 2s, height 4s;
+
+}
+header img:hover{                          /** size and animation effect has applied **/
+    animation: logo 2s linear infinite;
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes logo {
+0%, 7% {
+    transform: rotateZ(0);
+}
+15% {
+    transform: rotateZ(-15deg);
+}
+20% {
+    transform: rotateZ(10deg);
+}
+25% {
+    transform: rotateZ(-10deg);
+}
+30% {
+    transform: rotateZ(6deg);
+}
+35% {
+    transform: rotateZ(-4deg);
+}
+40%, 100% {
+    transform: rotateZ(0);
+}
+}
+
+/** nav **/
+
+nav {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {         /**some properties I searched and added according my want**/
+    flex-grow: 1;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    text-decoration: none;
+    color: red;
+}
+
+nav a:hover{
+    color:black;
+    transform: scale(1.2);
+}
+
+  /** 3 properties color size and the line animation**/
+nav a::after {          /**some properties I searched and added according my want and some are also copied**/     
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right:0;
+    height: 2px;
+    transform: scaleX(0);
+    background: #333;
+    transition: 0.7s transform cubic-bezier(0.06, 0.9, 0.28, 1);
+    
+}
+
+nav a:hover::after{
+    transform: scaleX(1) 
+}
+ /** bootstrap components **/
+.row{
+    margin-top: 10px;
+    height: 40%;   
+}
+
+.col-sm-12{
+    background-image: url(images/back.jpg);
+    
+}
+
+ .col-sm-12 a{           /** <!--It is copied from https://codepen.io/kocsten/pen/vYXLmRX but I adjusted
+                            it by my way like padding, its location,its 4 elements (there is 3) and all-->**/
+    position: relative;
+    display: inline-block;
+    padding: 120px 25px;
+    margin: 20px 7px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 40px;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 15px;
+    
+    
+   
+}
+.col-sm-12 a:hover{
+    background: #03e9f4;
+    color:black;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.col-sm-12 a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+.col-sm-12 a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+.col-sm-12  span{  
+    position: absolute;
+    display: block;
+}
+.col-sm-12 span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.col-sm-12 span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.col-sm-12  span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+} 
+
+/** footer **/
+footer{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding-top: 10px;
+}
+footer p{
+    grid-column: 1;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+}
+
+footer img {
+    float: right;
+    grid-column: 2;
+    margin-right: 12px;
+    
+}
+footer img:hover{
+    animation: logo 2s linear infinite;
+    }
+
+
+/** some effects i looked searched and then used like submit one and all **/
+.form-body{
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 41, 255, 0.02) 0%,
+        rgba(0, 41, 255, 0) 100%
+    );
+}
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 0.3em;
+}
+li span {
+    font-weight: 700;
+    color: #102a43;
+    line-height: 35px;
+    line-height: 2.5rem;
+    font-size: 12px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+input[type="submit"] {
+    background: #fc4366;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 1.3em;
+}
+
+.form-body {
+    width: 460px;
+    margin: 5em auto;
+}
+form {
+    background-color: #ffffff;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.required-star {
+    color: #fc4366;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 9px 20px;
+    border: 1px solid #e1e2eb;
+    background-color: #fff;
+    color: #102a43;
+    caret-color: #829ab1;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-size: 1rem;
+    line-height: 29px;
+    line-height: 2rem;
+    box-shadow: inset 0 2px 4px 0 rgba(206, 209, 224, 0.2);
+    border-radius: 3px;
+
+}

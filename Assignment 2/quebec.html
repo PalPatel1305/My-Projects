@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  Author: Pal Manojkumar Patel, 000865048,01/06/2022,
+            This is Assignment 2 for COMP 10259 course for use of responsive bootstrap and css styling .  --> 
+
+    <title>Quebec</title>
+
+    <!--Link for my styling -copied** -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <!--Link for css libraries-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+
+    <!--Link for external css files created by me-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Link for js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+  <header> <!--header-->
+      <a href="home.html"><img src="images/logo.png" alt="logo" width="105" height="87"  ></a> 
+      <h1>Travel Canada</h1>
+
+      <nav> <!--nav-->
+
+          <a href="home.html">Home</a>
+          <a href="alberta.html" title="alberta">Alberta</a>
+          <a href="british_columbia.html" title="british_columbia">British Columbia</a>
+          <a href="island.html" title="island">Prince Edward Island</a>
+          <a href="#" title="quebec">Quebec</a> 
+          <a href="contact.html" title="Contact">Contact Us</a>
+
+      </nav>
+
+  </header>
+
+  <div class="row"> <!--accordian copied from bootstrap document website with understandings-->
+    <div class="col-sm-4">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item"> <!--collapse show will display throughout, when we toggle it will collapse -->
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" >
+                  Quebec
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body"> <!--information copied from wikipedia-->
+                    <strong>Quebec</strong> is one of the thirteen provinces and territories of Canada. It is the largest province by area and the second-largest by population. Much of the population lives in urban areas along the St. Lawrence River, between the most populous city, Montreal, and the provincial capital, Quebec City. Quebec is the home of the Québécois nation. Located in Central Canada, the province shares land borders with Ontario to the west, Newfoundland and Labrador to the northeast, New Brunswick to the southeast, and a coastal border with Nunavut; in the south it borders Maine, New Hampshire, Vermont, and New York in the United States.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  British Columbia
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Let explore the <strong><a href="british_columbia.html">British Columbia</a></strong>!!
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Prince Edward Island
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Let explore the <strong><a href="island.html">Prince Edward Island</a></strong>!!
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                    Alberta
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Let explore the <strong><a href="alberta.html">Alberta</a></strong>!!
+                  </div>
+                </div>
+              </div>
+      </div>
+        
+    </div>
+
+    <div class="col-sm-8">  
+                                  <!--carousel copied from bootstrap document website with understandings-->
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators"> 
+          <!--active will show that photo and first button is for the bottom symbols and other two for 
+            previous and next-->
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/quebec/img-1.png" class="d-block w-100" alt="img gallery" width="800" height="570">
+          </div>
+          <div class="carousel-item">
+            <img src="images/quebec/img-3.png" class="d-block w-100" alt="img gallery" width="800" height="570">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> 
+    </div>
+  </div>
+  <footer><!--footer-->
+    <p>&copy;2022,Pal Patel,Mohawk College</p>
+    <a href="contact.html"><img src="images/messageicon.jpg" alt="Contact icon" width="41" height="36"></a>
+  </footer>
+
+</body>
+</html>
