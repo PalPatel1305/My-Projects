@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--  Author: Pal Manojkumar Patel, 000865048,07/26/2022,
+              This is Assignment 5 for COMP 10259 course for Svg elements.  
+              I have made the game of collecting stars. Score will be displayed how many stars the user have collected -->
+
+    <!-- title -->
+    <title>SVG</title>
+    <!-- external link  for js -->
+    <script src="style.js"></script>
+    <!-- external link  for css -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- js-boot-strap copied link- https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+     
+</head>
+
+<body class="text-center">
+    <header id="headingcurve">
+        <!-- header -->
+
+        <svg width="400" height="450" viewbox="0 0 400 450">
+            <!-- text and textpath -->
+            <path d="M 50 200 q 155 -210 300 0" fill="none" id="curve" />
+            <text>
+                <textPath href="#curve" fill="aliceblue"> &#9733; Collect Stars &#9733;</textPath>
+            </text>
+        </svg>
+    </header>
+
+    <main>
+
+        <div id="playerData" class="mt-5">
+
+            <!--label-->
+            <label for="username">User Name:</label>
+            <!-- input  -->
+            <div>
+                 <input type="text" name="username" id="username" placeholder="Enter your name">
+                 <p id="errorMsg"></p>
+            </div>
+
+            
+                
+            <!--creating space for error message-->
+            
+            <div class="mt-5">
+                <button id="check">Ready?</button> <!-- button -->
+            </div>
+
+            <p class="m-2" style="font-size:0.7em;"> Once you click the ready button start collecting the stars on the Screen!!!</p>
+
+        </div>
+
+
+
+        <div id="game">
+            <!-- svg elements -->
+            <h1 id="finalResult" class="mt-2">Star World!</h1>
+
+            <svg width="700" height="500" id="gameArea" class="mt-2">
+                <!-- circle -->
+                <circle id="shootingStar" cx="100" cy="100" r="2.5" style="fill:white"></circle>
+
+                <!-- a svg inside a svg -->
+                <defs>
+                    <svg id="star" viewbox="0 0 50 50" x="0" y="0" width="25" height="25">
+                        <!-- star coordinates -->
+                        <polygon points="24 36 10 44 12 28 1 17 17 15 24 1 30 15 46 17 35 28 37 44"></polygon>
+                    </svg>
+                </defs>
+
+            </svg>
+            <!-- time -->
+            <p id="Time" class="mt-3">Time</p>
+            <!-- presenting the score -->
+            <p id="score" class="mt-3" onmouseover="onmouse()" onmouseout="offmouse()">Collected Stars : 0</p>
+
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="mt-2">
+        <p>&copy;2022 Pal Patel-000865048</p>
+    </footer>
+
+</body>
+
+</html>

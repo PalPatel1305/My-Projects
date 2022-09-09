@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Author: Pal Manojkumar Patel, 000865048,08/07/2022,
+    This is Assignment 6 for COMP 10259 course for use of Ajax and manipulating dom .  -->
+
+    <!--Title-->
+    <title>Ajax_Assignment_6</title>
+
+    <!--Javascript link-->
+    <script src="index.js"></script>
+    <!-- Css link -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <!-- Bootstrap Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <main>
+        <!-- Form -->
+        <form id="ajaxForm" class="mt-4">
+            <!-- input feild -->
+            <div class="text-center border-1">
+                <label for="inputField">Enter Series Name</label>
+                <input id="inputField" type="text" />
+                <!-- printing error -->
+                <p id="errorMsg"></p>
+                <!-- <button type="button" id="check" class="btn btn-info text-light">Check</button> -->
+                <!-- <br><br> -->
+            </div>
+            <!-- buttons -->
+            <div class="text-center mt-4">
+                <button type="button" id="firstButton" class="btn btn-info text-light">First</button>
+                <button type="button" id="secondButton" class="btn btn-info text-light">Second</button>
+                <button type="button" id="thirdButton" class="btn btn-info text-light">Third</button>
+            </div>
+
+        </form>
+
+        <!-- not putting header tag because if i put the header, i need the footer as well and i dont want that at top  -->
+        <div id="header" class="mt-3">
+
+        </div>
+        <!-- data div -->
+        <div id="ajaxData" class="row text-center mt-3">
+
+        </div>
+        <!-- data table div -->
+        <table id="ajaxTable" class="table table-striped table-primary table-hover table-bordered text-center mt-3">
+
+        </table>
+
+    </main>
+
+</body>
+
+</html>

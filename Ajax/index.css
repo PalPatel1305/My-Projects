@@ -1,0 +1,19 @@
+/**  Author: Pal Manojkumar Patel, 000865048,08/07/2022,
+* This is Assignment 6 for COMP 10259 course for use of Ajax and manipulating dom . 
+ **/
+ 
+/* div */
+#ajaxData{
+    width: 100% !important;
+}
+
+/* errormsg */
+#errorMsg{
+    height: 20px;
+    color: red;
+}
+
+/* table */
+table{
+    width: 100%;
+}

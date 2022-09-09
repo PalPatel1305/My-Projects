@@ -1,0 +1,111 @@
+
+/**  Author: Pal Manojkumar Patel, 000865048,07/26/2022,
+This is Assignment 5 for COMP 10259 course for use of css styling .  **/ 
+
+/* body */
+body {
+  background-image: linear-gradient(#2a6496, #fff  70%, #011852);
+}
+/* header */
+header{
+  font-size: 3em;
+  font-weight: bolder;
+  height: 200px;
+}
+/* h1 */
+
+h1{
+  color: #edeade;
+}
+
+/* footer */
+
+footer{
+  border-top:2px solid #edeade;
+  color: #edeade;
+}
+
+
+/* svg styling */
+#gameArea {
+  background-color: black;
+}
+
+/* game div */
+#game {
+  display: none;
+  text-align: center;
+  height: 450px;
+}
+
+/* text */
+#svgText{
+  position: relative;
+}
+
+/* time  block */
+#Time{
+
+  font-weight: bolder;
+  font-size: 1.3em ;
+  color:peachpuff;
+}
+
+/* score block */
+#score{
+  font-weight: bolder;
+  font-size: 1.3em ;
+  color:peachpuff;
+
+}
+
+/* user data  */
+
+#playerData{
+  height: 415px;
+  font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: #006db0;
+}
+/* check button */
+#check{
+  background-color: #93ccea;
+  width: 200px;
+  border-radius: 20px;
+  text-decoration: none;
+  border: none;
+}
+
+/* errormsg */
+#errorMsg{
+  color: red;
+  height: 10px;
+  font-size: small;
+}
+
+/* circle */
+circle {
+  fill: whitesmoke;
+}
+
+/* effect and animation for shooting star */
+#shootingStar {
+  left: 50%;
+  top: 50%;
+  animation: shooting 3s ease;
+}
+
+/* animation for shooting star */
+@keyframes shooting {
+  0% {
+    transform: translateX(0px), translateY(0px);
+    transform: rotateZ(-45deg);
+  }
+
+  100% {
+    transform: translateX(700px);
+
+  }
+}
+ 
