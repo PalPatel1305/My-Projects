@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Brampton Recycle Information</title>
+    <!--  Author: Pal Manojkumar Patel, 000865048,02/11/2022,
+          This is Lab 3 for COMP CO710 course. --> 
+   
+    <style>
+
+        
+        .navigation{
+                    text-align: center;
+                    background-color: #fbefb3;
+                    margin-left: 3em;
+                    margin-right: 3em;
+                }  
+                
+        .navigation a{
+                    text-decoration: none;
+                    color: #14ab3f;
+                    font-weight: bold;
+                    font-size: 20px;
+                    }
+
+        .navigation a:hover{
+                    color: #ec834a;
+                    }
+
+        .navigation a:active{
+                    color: black;
+                    }
+
+        
+        .WRC   {
+                text-decoration-line: underline;
+                text-decoration-style: double;
+                }
+    
+        h1#recyclebin  {
+                        letter-spacing: 10px;
+                        vertical-align: middle;
+                        font-size: 44px;
+                        font-family: Arial, Gadget, sans-serif;
+                        display: table-cell;
+                    } 
+                #top{
+                    display: table;
+                    text-align: center;
+                    padding-left: 450px;
+                    }
+                
+                #imgmap{
+                    float: right;
+                    }
+
+        ul#recycleitems{
+                        list-style-image: url("images/recycle_sm.jpg");
+                        line-height: 2.5em;
+                    }           
+
+        ul#recycleitems li:last-of-type{
+                        list-style-image: url("images/greenarrow.png");
+                    }    
+            
+                    em#col{
+                        color: #b8860b;
+                        }
+
+                    #WIK a{
+                        background-color: royalblue;
+                        text-decoration: none;
+                        color: white;
+                    }
+                
+                div     {
+                            margin-left: 3em;
+                            margin-right: 3em;
+                        }
+                
+                h1,h2,h3{
+                            color: #14ab3f;
+                        } 
+
+                    nav li{
+                        display: inline;
+                        padding: 40px;
+                    }
+
+                    ol{
+                        list-style:lower-roman;
+                    }
+                    footer{
+                        color: black;
+                        background-image: url("images/ricepaper.png");
+                        margin-bottom: 5em;
+                        text-align: center;
+                        font-weight: bold;
+                        margin-top: 20px;
+                        border-top: 2px solid black;
+                        }
+                        
+    </style>
+
+</head>
+
+
+
+
+<body>
+
+
+
+    <!-- nav -->
+    <nav class="navigation" >
+       
+        <ul> 
+           <li> <a href="#recyclebin"> Recycle Centers </a></li>
+           <li> <a href="#"> Resources </a></li>
+           <li> <a href="#WIK"> Composting </a></li>
+           <li>  <a href="#free"> Contact Us </a></li>
+        </ul>
+
+    </nav>
+
+     <!-- header -->
+    <header id="top">
+
+        <img src="images/recyclebins.png" alt="Recyclebin" width="135" height="135">
+        <h1 id="recyclebin">Recycle</h1>
+        <img src="images/recyclebins.png" alt="Recyclebin" width="135" height="135">
+
+    </header>
+
+    <div>
+
+        <h1>Community Recycling Centers</h1>
+        <p>
+            Community Recycling Centers will accept good used clothing, furniture and household items
+            for their on-site stores. Instead of calling for a bulk pickup, take used items to the Community 
+            Recycling Centers!
+        </p>
+        <!-- image -->
+        
+        <figure id="imgmap">
+            <img src="images/recycle_map.png" alt = "Educated" width="349" height="490"  title="recycle_map"/>
+        </figure>
+
+        <ul>
+            <li>
+                <span class="WRC"> West Community Recycling Center</span>
+                <ul>
+                    <li>Monday: 10 am - 1 pm</li>
+                    <li>Wednesday: 10 am - 5 pm</li>
+                    <li>First Saturday of each month only: 9 am - 12 pm</li>
+                </ul>  
+            </li> 
+
+            <li>
+                <span class="WRC">East Community Recycling Center</span>
+                <ul>
+                    <li>Tuesday: 10 am - 2 pm</li>
+                    <li>Saturday: 10 am - 12 pm</li>
+                </ul>
+            </li>
+        </ul> 
+    </div>
+    
+    <div>
+
+        <h2>What goes in a recycling box?</h2>
+
+        <p>Put the following items in a recycling box:</p>
+
+        <ul id="recycleitems">
+            
+            <li>Glass</li>
+            <li>Paper</li>
+            <li>Plastic</li>
+            <li>Aluminum foil (clean)</li>
+            <li>Cardboard (fold or break into small pieces)</li>
+            <li>Styrofoam</li>
+            <li>Aerosols (new in 2020/2021)</li>
+
+        </ul>
+
+    </div>
+
+    <div>
+        <h2>Recycling Tips </h2>
+        
+        <p>
+            Get into the habit of recycling, and it will become second nature. Here are some tips that 
+            will help you:
+        </p>
+        
+        <ul>
+            <li>
+                Bottles, cans and jars:
+                <ol>
+                    <li class="WRC"><em>All bottles, cans and jars must be empty.</em></li>
+                    <li>Take the lids off of all bottles, cans and jars and rinse them.</li>
+                    <li>Throw all metals lids into the recycling box.</li>
+                    <li>Throw plastic lids that bend easily into the recycling box.</li>  
+                </ol>          
+            </li>
+
+            <li>
+                Leaf and yard waste can be placed in paper bags. 
+                You can also use yard waste to make compost for your garden. 
+                <span id="WIK"><a href="https://en.wikipedia.org/wiki/Compost">How to make compost</a></span>
+            </li> 
+
+            <li>
+                Green bins can be used for kitchen waste.
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        
+        <h1>Large Item Pickup</h1>
+
+        <p>
+            Large items can be picked up by the city garbage collection service. 
+            Please contact us directly for a to arrange a pickup time.
+        </p>
+
+        <p>
+            Recycling is good for the environment. 
+            Our city has one of the best recycling programs in the world! <em id="col"> You can pick up another 
+            recycling box at City Hall.</em> Bulk items can also be picked up on your regular garbage collection
+            day.
+        </p>
+
+    </div>
+
+    <!-- footer -->
+
+    <footer id="free">
+        <h3>Contact Us</h3>
+        <p>
+           <em> Pal Patel-Brampton Manager</em> <br>
+            P.O. Box 3569<br>
+            Our City,ON<br>
+            L8T 4N1<br>
+        </p>
+    </footer>
+  
+</body>
+</html>

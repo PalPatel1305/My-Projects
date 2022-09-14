@@ -1,0 +1,156 @@
+/*
+    Css styles for external stylesheet.
+    Statement of authorship: Pal Patel, 000865048, 03/12/2022/,
+    Purpose: Cuting a template for different pages in a website.
+*/
+
+
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+.grid-container{
+            display:grid;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            gap: 10px;
+            grid-template-rows: auto auto auto auto;
+            margin: 0;
+            padding: 0;
+        }
+
+/* Header */
+
+.grid-header{
+            align-items: center;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-row: 1;
+        }
+
+.grid-header-symbols{
+            grid-column: 1;
+        }
+
+.grid-header-logo{
+            display: block;
+            grid-column: 2;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+.grid-header-login{
+            grid-column: 3;
+        }
+
+.grid-header-login > a {
+
+            background-color:#0172BA;
+            border-radius: 25px;
+            color: #ECF7FE;
+            float: right;
+            margin-right: 10px;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+.grid-header-login  > a:hover{
+            background-color: #089247;
+        }
+
+/* Nav */
+
+.grid-nav{
+            background-color: #ecf7fe;
+            border-top: 2px solid #0172BA;
+            border-bottom: 2px solid #0172BA;
+            display: flex;
+            grid-row: 2;
+            justify-content: center;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;       
+        }
+
+.grid-nav a{
+            background-color:white;
+            border: 2px solid #0172BA;
+            border-radius: 18px;  
+            color: #0172BA ;
+            font-size: 13px;
+            margin-left: 4%;
+            padding: 0.6% 1.3% 0.6% 1.3% ;
+            text-decoration: none;
+        }
+
+.grid-nav a:hover{
+            background-color: #003557;
+        }
+    
+/* Footer */
+
+.grid-footer {
+            background-color: #ECF7FE;
+            border-bottom: 2px solid #0172BA;
+            border-top: 2px solid #0172BA;
+            display: grid;
+            grid-template-columns: 245px auto auto auto auto;
+            grid-template-rows: auto auto;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+
+.grid-footer ul{
+            list-style-type: none;
+        }
+
+.footer-logo{
+            grid-column: 1;
+            grid-row: 1;
+            margin-top: 10px;
+        }
+
+.footer-aboutus{
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+.footer-Photos{
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+.footer-Reviews{
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+.footer-Travel{
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+.footer-Seminars{
+            grid-column: 4;
+            grid-row: 1;
+        }
+
+.footer-Events{
+            grid-column: 4;
+            grid-row: 2;
+        }
+
+.footer-Shop{
+            grid-column: 5;
+            grid-row: 1;
+        }
+
+.foot{
+            border-bottom: 1px solid #0172BA;
+            font-weight: bold; 
+    }

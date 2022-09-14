@@ -1,0 +1,64 @@
+/*
+    Css styles for external stylesheet.
+    Statement of authorship: Pal Patel, 000865048, 04/02/2022,
+    Purpose: Cuting a template for printing format of a page in a website.
+*/
+
+/* FOR PRINITING PURPOSE  */
+
+@media print {
+
+    *{
+        color: black !important;
+        background-color: white !important;
+        font-family: 'Times New Roman', Times, serif !important;
+    }
+
+    .blocks label{
+                 display: inline !important;
+    }
+
+    .border-print{
+                 border: 1px solid black !important;
+    }
+
+    caption{
+                caption-side: top !important;
+                text-align: center !important;
+        }
+
+    .form{
+                 transform:scaleX(-1) !important;
+        }
+
+    .formsubmit img{
+                 width: 100%;
+        }
+
+    .form fieldset {
+                margin: 0;
+                border: solid 2px gray;
+        }
+
+    .header{
+                font-size: 10px;
+        }
+
+    .husk{
+                 background-image: none !important;
+        }
+
+    .nav,.footer{
+                display: none;
+        }
+
+   table,tr,td,th{
+                 border: solid white !important;
+        }
+
+    textarea{
+        width: 70%;
+    }
+
+
+    }

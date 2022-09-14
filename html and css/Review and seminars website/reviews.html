@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Adventure Reviews</title>
+     <!--  Author: Pal Manojkumar Patel, 000865048,04/02/2022,
+              This is Lab 5 for COMP CO710 course. --> 
+
+        <!--Linked external css file -->  
+    <link href="mobile.css" rel="stylesheet" type="text/css" />
+    <link href="adventuretyles.css" rel="stylesheet" type="text/css" />
+    <link href="printstyles.css" rel="stylesheet" type="text/css" />
+
+    <style>
+
+         *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+                /* BUTTON OF FORM  */
+        .button input{             
+                        background-color: #ffffe6;
+                        padding: 2px;
+                        margin-bottom: 10px;
+                    }
+
+                /* STYLES FOR FORM  */
+        form {
+                        background-color: #40538c;
+                        width: 100%;
+			}
+        
+        fieldset{
+                    border: solid 2px white;
+                    margin: 10px;
+                   
+			    }
+  
+        .formsubmit img{
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+            }
+
+
+        .fieldsets div{
+                    margin:0;
+                    padding:0;
+             }
+
+        .fieldsets label{
+                    color: white;
+                    display: inline;
+            }
+
+        .imgs img{
+                    margin-right:1px;
+                    margin-top: 0;
+                    margin-bottom: 1px;
+                    padding:0%;
+        }
+
+        .personaldata label{
+                    float: left;
+                    margin-right: 15px;
+                    text-align: right;
+                    width: 120px;
+        }
+        
+        .personaldata input {				
+                    background-color: #ffffe6 ;
+                    display: block;
+        }
+
+
+        .blocks label{
+                        display: block;
+                        color: antiquewhite;
+                    }
+
+        .blocks option{
+                        margin: 0%;
+                        padding: 0%;
+                    }
+
+        legend{               
+                    color: white;
+                    padding: 0 10px;
+        }
+
+        label,input{
+                    margin: 0;
+                    padding:0;
+        }
+
+            /* END OF STYLES */
+    </style>   
+</head>
+<body>
+    <div class="form">
+        <div class="header">   <!-- HEADER -->
+            <h1> Outdoor Adventure Trip Review <br> 2020/2021 </h1>
+        </div>
+
+        <div class="nav">              <!-- NAV -->
+                <a href="#">About Us</a>
+                <a href="#">Travel</a>
+                <a href="#">Photos</a>
+                <a href="#">Shop</a>
+                <a href="#">Reviews</a>
+                <a href="seminars.html">Seminars</a>
+                <a href="#">Events</a>
+        </div>
+        
+        <div class="main">         <!-- MAIN  -->
+                                    <!-- FORM STARTS HERE  -->
+             <form method="post" action="https://csunix.mohawkcollege.ca/tooltime/showit.pl">
+                <input type = "hidden"  name = "formname" value = "Pal Patel Trip Review">
+
+                <fieldset class = "fieldsets">       <!-- FEILDSET 1 -->
+                    <legend>Trip Reviews</legend>
+
+                    <select id = "trip" name = "trip">
+                        <option value = "Alberta Rural">Alberta Rural</option>
+                        <option value = "B.C. Coast">B.C. Coast</option>
+                        <option value = "Ontario Lake Superior">Ontario Lake Superior</option>
+                        <option value = "PEI" selected = "selected">PEI</option>
+                        <option value = "Nova Scotia Cabot Trail">Nova Scotia Cabot Trail</option>
+                    </select>
+
+                    <select id = "duration" name = "duration">
+                        <option value = "05d"  selected = "selected">05 Days</option>
+                        <option value = "07d">07 Days</option>
+                        <option value = "10d">10 Days</option>
+                        <option value = "14d">14 Days</option>
+                    </select>
+                    
+                    <div class="imgs">       <!--  RATINGS -->
+                        <label>Your rating:</label>
+                        <div class="imgs">
+                            <input type = "radio" name = "rating" id = "4" value = "4" checked = "checked">
+                            <label for = "4"><img src="images/wheel_sm.jpg" alt="Star" width="20" height="20"/><img src="images/wheel_sm.jpg" alt="Star" width="20" height="20"/><img src="images/wheel_sm.jpg" alt="Star" width="20" height="20"/><img src="images/wheel_sm.jpg" alt="Star" width="20" height="20"/></label>
+                        </div>
+
+                        <div class="imgs">
+                            <input type = "radio" name = "rating" id = "3" value = "3">
+                            <label for = "3"><img src="images/wheel_sm.jpg" alt="Star" width="20" height="20"/><img src="images/wheel_sm.jpg" alt="Star" width="20" height="20"/><img src="images/wheel_sm.jpg" alt="Star" width="20" height="20"/></label>
+                        </div>
+
+                        <div class="imgs">
+                            <input type = "radio" name = "rating" id = "2" value = "2">
+                            <label for = "2"><img src="images/wheel_sm.jpg" alt="Star" width="20" height="20"/><img src="images/wheel_sm.jpg" alt="Star" width="20" height="20"/></label>
+                        </div>
+
+                        <div class="imgs">
+                            <input type = "radio" name = "rating" id = "1" value = "1">
+                            <label for = "1"><img src="images/wheel_sm.jpg" alt="Star" width="20" height="20"/></label>
+                        </div>
+                    </div>
+                    
+                    <div class="blocks">
+                        <label for = "comments" >Comments</label>
+                        <textarea cols = "65" rows = "7" name = "comments" id="comments"></textarea>
+			
+                    </div>
+
+                </fieldset>
+
+                <fieldset class = "fieldsets">    <!-- FEILDSET 2 -->
+                    <legend>I would be interested in these trips (check all that apply):</legend>
+                    
+                    <div class="border-print">
+                        <input type = "checkbox" id = "coast" name = "interested" value = "coast">
+                        <label for = "coast">Sea or Lake Coast</label>
+                    </div>
+                    
+                    <div class="border-print">
+                        <input type = "checkbox" id = "rural" name = "interested" value = "rural">
+                        <label for = "rural">Rural</label>
+                    </div>
+
+                    <div class="border-print">
+                        <input type = "checkbox" id = "mountains" name = "interested" value = "mountains" checked = "checked">
+                        <label for = "mountains">Mountains</label>
+                    </div>
+                    
+                    <div class="border-print">
+                        <input type = "checkbox" id = "others" name = "interested" value = "others">
+                        <label for = "others">Other (please specify)</label>
+                        <input type = "text" name = "others">
+                    </div>
+
+                </fieldset>
+
+                <fieldset class = "fieldsets">     <!-- FEILDSET 3 -->
+                    <legend>About You (optional)</legend>
+
+                    <div class="blocks">
+                    
+                        <label for = "time">I usually prefer to trips this time of year (select all that apply):</label>
+                        <select id = "time" name = "pref" multiple size = "4">
+                            <option>Winter</option>
+                            <option>Spring</option>
+                            <option>Summer</option>
+                            <option>Fall</option>
+                            
+                        </select>
+
+                    </div>
+
+                    <div class="personaldata">     <!-- PERSONAL INFORMATION -->
+                        <label for = "firstname">First Name</label>
+                        <input type = "text" name = "firstname" id = "firstname" required = "" maxlength = "20" class = "textbox">
+                    </div>
+
+                    <div class="personaldata">
+                        <label for = "lastname">Last Name</label>
+                        <input type = "text" name = "lastname" id = "lastname"  maxlength = "20" class = "textbox">
+                    </div>
+
+                    <div class="personaldata">
+                        <label for = "contact">Phone Number</label>
+                        <input type = "text" name = "phone" id = "contact" maxlength="12" placeholder = "123-456-7890"  class = "textbox">
+                    </div>
+
+                    <div class="personaldata">
+                        <label for = "email">Email Address</label>
+                        <input type = "email" name = "emailaddress" id = "email" size = "40" placeholder = "name@example.com"  class = "textbox">
+                    </div>
+                    
+                </fieldset>  <!-- FEILDSET FINISHED HERE -->
+
+                <div class="button">   <!-- BUTTONS -->
+                    <input  type = "submit" value = "SEND REVIEW">
+                    <input  type = "reset" value = "CANCEL">
+                </div>
+
+             </form>  <!-- FORM ENDS HERE-->
+        </div>
+
+
+        <div class="formsubmit">    <!--IMG OF RESULTS OF FORM -->
+            <img src="images/formsubmit.png" alt="Value" width="900" height="467">
+        </div>
+
+        <div class="footer">       <!-- FOOTER -->
+            <img src="images/outdooradventurehorizontal.png" alt="logo" width="245" height="79"/>
+        </div>
+
+    </div>
+    
+</body>
+</html>

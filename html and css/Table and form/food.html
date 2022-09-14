@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam Fall 2020</title>
+    <!--  Author: Pal Manojkumar Patel, 000865048,04/12/2022,
+              This is Final exam for COMP CO710 course. --> 
+
+    <style>
+
+        main{
+            display: grid;
+            grid-template-columns: 15% auto auto;
+            gap: 10px;
+        }
+        .radiolabel{
+            padding: 6px;
+            padding-left: 0;
+           
+        }
+
+        .list{
+            grid-column: 1;
+        }
+
+        .form{
+            grid-column: 2;
+            border: 2px dashed black;
+            font-family: sans-serif;
+            padding: 10px;
+
+        }
+
+        .button{
+            height: 40px;
+            width: 200px;
+            background-color: white;
+
+            
+        }
+        .diet{
+            margin-bottom: 10px;
+        }
+
+        .diet label{
+                    float: left;
+                    margin-right: 15px;
+                    text-align: right;
+                    width: 200px;
+        }
+
+        .diet input {				
+                    display: block;
+        }
+
+        
+        .table{
+            grid-column: 3;
+        }
+
+        table.schedule {
+
+                /* border: 1px solid black; */
+                border-collapse: collapse;
+                font-family:sans-serif;
+                text-align: center;
+                /* width: 80%; */
+        }
+
+        table.schedule tbody th, table.schedule td {
+                border: 1px solid black;
+                padding: 10px;
+                font-family:sans-serif;
+
+            }
+        caption{
+            margin-bottom: 10px;
+        }
+
+        table.schedule thead {
+            background-color: grey;
+            color: white;
+        }
+
+        table.schedule thead tr {
+                height: 80px;
+            }
+
+        table.schedule tbody tr {
+                        height: 75px ;
+                    }
+        table.schedule col.firstCol {
+            background-color: #d3d3d3;
+            width: 10%;
+        }
+
+    /* Styles for the remaining columns */
+
+        table.schedule col.dayCols {
+                        width: auto;
+                    }
+
+    @media only screen and (max-width:800px) {
+
+            header{
+                grid-row: 1 !important;
+                width: 100%;
+            }
+            .list{
+                grid-row: 2 !important;
+                width: 100%;
+                
+            }
+            .form{
+                grid-row: 3 !important;
+                width: 100%;
+            }
+
+            .table{
+                grid-row: 4 !important;
+                width: 100%;
+            }
+
+            footer{
+                grid-row: 5 !important;
+                width: 100%;
+            }
+
+            }
+
+            header{
+            text-align: center;
+            font-family: MS Comic sans,cursive;
+            font-size: 2em;
+        }
+
+            fieldset{
+                        border: solid 2px black;
+                        margin: 10px;
+                    
+                    }
+
+
+            footer p{
+                font-size: 0.8em;
+                font-family: MS Comic sans,cursive;
+                text-align: center;
+                border-top: 1px solid black;
+                padding-top: 0%;
+            }
+
+            
+            legend{               
+                        color: black;
+                        padding: 0 20px;
+            }
+
+    </style> <!-- END OF STYLE -->
+</head>
+<body>
+    <header> <!-- HEADER -->
+          <p>Nutrition Conference</p>
+    </header>
+
+    
+
+    <main>
+           <!-- MAIN -->
+        <div class="list">
+            <p>Refer to:</p>
+            <p><a href="http://food-guide.canada.ca/en">Canada's Food Guide</a></p>
+            <ul>
+                <li>Healthy food choices</li>
+                <li>Eating habits</li>
+                <li>Recipes</li>
+            </ul>
+        </div>
+
+        <div class="form">
+            <form method="post" action="https://csunix.mohawkcollege.ca/tooltime/showit.pl">
+                <input type = "hidden"  name = "formname" value = "Nutrition Conference F2020 ">
+                 
+                 <h3>Survey</h3>
+                <fieldset class = "fieldsets">       <!-- FEILDSET 1 -->
+                    <legend>Activity (choose multiple)</legend>
+
+                    <div class="Activity">                           <!--CHECK BOX-->
+                        <input type = "checkbox" id = "Run" name = "Run" value = "Run">
+                        <label for = "Run">Run</label>
+                    </div>
+                    
+                    <div class="Activity">
+                        <input type = "checkbox" id = "Cycle" name = "Cycle" value = "Cycle" checked="checked">
+                        <label for = "Cycle">Cycle</label>
+                    </div>
+
+                    <div class="Activity">
+                        <input type = "checkbox" id = "Swim" name = "Swim" value = "Swim">
+                        <label for = "Swim">Swim</label>
+                    </div>
+
+                    <div class="Activity">
+                        <input type = "checkbox" id = "Play" name = "Playasport" value = "Play a sport">
+                        <label for = "Playasport">Play a sport</label>
+                    </div>
+
+                    
+
+                    <div class="RADIO">                                                  <!--  RADIO -->
+                        <p class="radiolabel">How often?</p>
+                        <div>
+                            <input type = "radio" name = "How often?" id = "3times" value = "3+ times per week " >
+                            <label for = "3times">3+ times per week </label>
+                        </div>
+            
+                        <div>
+                            <input type = "radio" name = "How often?" id = "1or2" value = "1 or 2 times per week" checked = "checked">
+                            <label for = "1or2">1 or 2 times per week</label>
+                        </div>
+            
+                        <div>
+                            <input type = "radio" name = "How often?" id = "once" value = "Once a month">
+                            <label for = "once">Once a month</label>
+                        </div>
+            
+                    </div>
+                    
+
+            
+                </fieldset>
+
+                <fieldset class = "fieldsets">       <!-- FEILDSET 2 -->
+                    <legend>Suggestions to motivate people to eat healthy?</legend>
+                    <div class="textarea">                                <!--TEXT AREA-->
+                        <label for = "suggestions" ></label>
+                        <textarea cols = "65" rows = "7" name = "Suggestions" id="suggestions" placeholder="Please Suggest some ideas"></textarea>
+                    </div>
+            
+                </fieldset>
+
+
+                <fieldset class = "fieldsets">       <!-- FEILDSET 1 -->
+                    <legend>Diet Information:</legend>
+
+                    
+                    <div class="diet">     <!-- PERSONAL INFORMATION -->
+                        <label for = "specialized">Specialized Diet?</label>
+                        <input type = "text" name = "Specialized Diet" id = "specialized" maxlength = "20" placeholder="Vegan,keto, etc." class = "textbox">
+    
+                    </div>
+
+                    <div class="diet">
+                        <label for = "Favvegetable">Favourite vegetable?</label>
+                        <input type = "text" name = "Favourite vegetable" id = "Favvegetable"  maxlength = "20" class = "textbox">
+                    </div>
+
+                    <div class="diet">
+                        <label for = "fruit">Favourite Fruit?</label>
+                        <select id = "fruit" name = "Favourite Fruit">                                  <!-- select option-->
+                            <option value = "Apple"> Apple</option>                                
+                            <option value = "Banana">Banana</option>
+                            <option value = "Apricot" selected = "selected">Apricot</option>
+                           
+                        </select>
+
+                    </div>
+
+                </fieldset>
+
+                <div class="button_align" >   <!-- BUTTONS -->
+                    <input  type = "submit" value = "Send Survey" class="button">
+                    <input  type = "reset" value = "Clear Survey" class="button">
+                </div>
+            </form>
+        
+        </div>
+
+        <div class="table">
+            <table class="schedule">     <!-- SECOND TABLE -->
+           
+                <caption> Info Sessions Timetable</caption>
+            
+                <colgroup>                   <!--COLUMN GROUPS -->
+                    <col class="firstCol" />
+                    <col class="dayCols" span="4" />
+                    <col class="firstCol" />
+                </colgroup>
+            
+                <thead>
+                    <tr>
+                        <th>Conference Room</th>
+                        <th>9:00am</th>
+                        <th>11:00am</th>
+                        <th>1:00pm</th>
+                        <th>3:00pm</th>
+                        <th>7:00pm</th>
+                    </tr>
+                </thead>
+            
+                <tbody>
+                    <tr>
+                        <th>Lyra</th>
+                        <td rowspan="2" colspan="3">Lion Diets</td>
+                        <td>Keto Diets</td>
+                        <td rowspan="5">Vegan Diets</td>
+
+                    </tr>
+            
+                    <tr>
+                        <th>Perseus</th>
+                        <td rowspan="2">Fruits</td>
+                    </tr>
+            
+                    <tr>
+                        <th>Virgo</th>
+                        <td rowspan="2">Legumes</td>
+                        <td>Dairy</td>
+                        <td>Peanuts</td>
+                    </tr>
+            
+            
+                    <tr>
+                        <th>Taurus</th>
+                        <td colspan="3">Vegetarian Diets</td>
+                    </tr>
+            
+                    <tr>
+                        <th>Orion</th>
+                        <td colspan="3">Protein</td>
+                        <td> Dairy</td>
+                    </tr>
+            
+                </tbody>
+            
+            </table> <!-- END OF TABLE2 -->
+            
+            
+        </div>
+    </main>
+
+    <footer>    <!--  FOOTER -->
+            <p>Survey Says...&copy; 2020</p>
+    </footer>
+    
+</body>
+</html>

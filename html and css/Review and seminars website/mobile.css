@@ -1,0 +1,54 @@
+/*
+    Css styles for external stylesheet.
+    Statement of authorship: Pal Patel, 000865048, 04/02/2022,
+    Purpose: Cuting a template for responsive of a nav.
+*/
+
+
+/* MOBILE VIEW  */
+
+@media only screen and (max-width:599px) {
+    .nav a{
+        flex-direction: column;
+        width: 100%;
+    }
+    textarea{
+        width: 80%;
+    }
+    .formsubmit img{
+        width: 100%;
+    }
+
+}
+
+/* VIEW BETWEEN 600px AND 899px  */
+@media only screen and (max-width: 899px) {
+    .nav a{
+        justify-content: center;
+        flex-wrap: wrap !important;
+        margin-right: 1% !important;
+    }
+    textarea{
+        width: 90%;
+    }
+    .formsubmit img{
+        width: 100%;
+    }
+}
+
+/* VIEW BETWEEN 900px AND above */
+@media only screen and (min-width: 900px) {
+    .nav a{
+      justify-content: space-between;
+      padding: 1% 2% !important;
+      flex-wrap: nowrap !important;  
+         }
+    .formsubmit img{
+        width: 100%;
+    }
+}
+
+
+
+
+

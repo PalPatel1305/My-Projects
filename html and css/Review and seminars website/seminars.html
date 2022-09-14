@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Adventure Seminars</title>
+    <!--  Author: Pal Manojkumar Patel, 000865048,04/02/2022,
+              This is Lab 5 for COMP CO710 course. --> 
+
+        <!--Linked external css file -->  
+    <link href="mobile.css" rel="stylesheet" type="text/css" />
+    <link href="adventuretyles.css" rel="stylesheet" type="text/css" />
+    <link href="printstyles.css" rel="stylesheet" type="text/css" />
+    <style>
+            *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+                /* TABLE FORMATTING */
+        table.schedule {
+
+                        border: 2px solid black;
+                        border-collapse: collapse;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 0.75em;
+                        width: 100%;
+                    }
+
+        table.schedule th, table.schedule td {
+                        border: 1px solid black;
+                    }
+
+        table.schedule thead {
+                        background-color: #002759;
+                        color: white;
+                    }
+        
+        table.schedule thead tr {
+                        height: 50px;
+                    }
+
+        table.schedule tbody tr {
+                        height: 40px;
+                    }
+
+        table.schedule tbody td {
+                        padding: 5px;
+                    }
+
+        table.schedule col.firstCol {
+                        background-color: #DDEEFF;
+                        width: 7%;
+                    }
+
+            /* Styles for the remaining columns */
+
+        table.schedule col.dayCols {
+                        width: 12%;
+                    }
+       
+        table.schedule caption{
+                        caption-side: bottom;
+                        margin: 0%;
+                        padding: 0%;
+                        text-align: right;
+                    }
+
+                    /* ANOTHER TABLE  */
+
+        table.legend {
+                        float: left;
+                        margin-top: 0%;
+                        margin-bottom: 10px;
+                        padding-top: 0%;
+                    }
+
+        table.legend caption{
+                        margin-top: 0%;
+                        margin-left: 8px;
+                        padding: 0%;
+                        text-align: left;
+                    }
+
+                    /* CLASS FOR BACKROUND COLOUR */
+
+        .BC_purple{
+                        background-color: #9262af;
+                    }
+
+        .C_yellow{
+                        background-color: #f9f871;
+                    }
+
+        .H_green{
+                        background-color: #99ee8a;
+                    }
+
+        .husk{
+                    background-image: url(images/dust.jpg);
+                    text-align: center;
+                }
+
+        .LDC_blue{
+                        background-color: #00A5D6;
+                    }
+
+                    /* CLASS FOR LEGEND TABLE STYLE */
+
+        #BC{
+                    border-left: 13px solid #9262af;
+                }
+
+        #Camp{
+                    border-left: 13px solid #f9f871;
+                }
+        
+        #Hike{
+                    border-left: 13px solid #99ee8a;
+                }
+
+        #LDC{
+                    border-left: 13px solid #00A5D6;
+                }
+
+     </style> <!-- END OF STYLE -->
+
+</head>
+
+<body>
+    <div class="container">
+                                    <!-- HEADER -->
+        <div class="header">
+            <h1> Outdoor Adventure Seminars <br> 2020/2021 </h1>
+        </div>
+                                    <!-- NAV -->
+        <div class="nav">             
+                <a href="#">About Us</a>
+                <a href="#">Travel</a>
+                <a href="#">Photos</a>
+                <a href="#">Shop</a>
+                <a href="reviews.html">Reviews</a>
+                <a>Seminars</a>
+                <a href="#">Events</a>
+        </div>
+                                    <!-- MAIN  -->
+        <div class="main">           
+             <table class="legend">     <!--  FIRST TABLE -->
+                <caption>Legend:</caption>
+            
+                <tbody>
+                    <tr>
+                        <td id="BC">Beginner Cycling</td>
+                        <td id="LDC">Long Distance Cycling</td>
+                        <td id="Hike">Hiking</td>
+                        <td id="Camp">Camping</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="schedule">     <!-- SECOND TABLE -->
+           
+                <caption> Schedule is subject to change</caption>
+
+                <colgroup>                   <!--COLUMN GROUPS -->
+                    <col class="firstCol" />
+                    <col class="dayCols" span="7" />
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>7am-9am</th>
+                        <th>9am-11am</th>
+                        <th>11am-12pm</th>
+                        <th>12pm-2pm</th>
+                        <th>2pm-4pm</th>
+                        <th>6pm-8pm</th>
+                        <th>8am-10pm</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Monday</th>
+                        <td colspan="7" class="husk" >Reserved for groups</td>
+                    </tr>
+
+                    <tr>
+                        <th>Tuesday</th>
+                        <td class="H_green">Hiking</td>
+                        <td class="BC_purple">Beginner Cycling</td>
+                        <td colspan="5" class="C_yellow">Camping</td>
+                        
+                    </tr>
+
+                    <tr>
+                        <th>Wednesday</th>
+                        <td rowspan="2"  class="LDC_blue">Long distance<br> Cycling Part 1</td>
+                        <td></td>
+                        <td class="BC_purple">Beginner Cycling</td>
+                        <td rowspan="2" class="C_yellow">Camping in Asia</td>
+                        <td rowspan="3" colspan="2" class="H_green">Hiking</td>
+                        <td rowspan="2" class="LDC_blue">Long distance<br> Cycling Part 2</td>
+                    </tr>
+
+
+                    <tr>
+                        <th>Thursday</th>
+                        <td class="C_yellow">Camping</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th>Friday</th>
+                        <td rowspan="4" class="C_yellow">Camping in Europe</td>
+                        <td colspan="2" class="BC_purple">Beginner Cycling</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th>Saturday</th>
+                        <td colspan="3" rowspan="2" class="H_green">Hiking</td>
+                        <td class="BC_purple">Beginner Cycling</td>
+                        <td colspan="2" rowspan="2" class="LDC_blue">Long distance Cycling Part 1 and 2</td>
+                    </tr>
+                    <tr>
+                        <th>Sunday</th>
+                        <td></td>
+                    </tr>
+                    
+                    <tr>
+                        <th>Holidays</th>
+                        <td colspan="2" class="LDC_blue">Long Distance Cycling</td>
+                        <td colspan="4" class="husk">No Seminars</td>
+                    </tr>
+
+
+                </tbody>
+
+            </table> <!-- END OF TABLE2 -->
+        </div>
+
+        <div class="footer">   <!--  FOOTER -->
+            <img src="images/outdooradventurehorizontal.png" alt="Logo" width="245" height="79"/>
+        </div>
+
+    </div>
+    
+</body>
+</html>

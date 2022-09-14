@@ -1,0 +1,77 @@
+/*
+    Css styles for external stylesheet.
+    Statement of authorship: Pal Patel, 000865048, 04/02/2022,
+    Purpose: Cuting a template for different pages in a website.
+*/
+
+
+
+*{
+    margin: 2px;
+    padding: 3px;
+}
+body{
+    margin: 0px auto;
+}
+
+.containers{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+                /* HEADER  */
+
+.header{
+    background-color: #e9efff;
+    grid-row: 1;
+    text-align: center;
+}
+             /* NAV  */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    grid-row: 2;
+    justify-content: center;
+    margin-left: 0%;
+    padding-top: 10px;
+    padding-bottom: 0%;
+    top: 0;
+    z-index: 100; 
+}
+
+.nav a{
+    background-color: #a8aabc;
+    padding: 1em 2em;
+    margin-right: 2%;
+    border: 2px solid black;
+    border-bottom: 0;
+    border-top-right-radius: 10px;
+    text-decoration: none; 
+    color: white;
+    margin-top: 0%;
+ }
+                  /* MAIN  */
+.main{
+    grid-row: 3;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+                    /* TABLE  */
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+                   /* FOOTER  */
+.footer{
+    border-top: 2px solid black;
+    grid-row: 4;  
+    margin-top: 0%;
+}
+
+.footer img{
+    display: block;
+    margin: 0% auto;
+    margin-top: 10px;
+    padding: 0%;
+}
