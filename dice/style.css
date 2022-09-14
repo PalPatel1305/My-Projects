@@ -1,0 +1,85 @@
+/**  Author: Pal Manojkumar Patel, 000865048,07/12/2022,
+This is Assignment 4 for COMP 10259 course for use of css styling .  **/ 
+
+
+#rolling,#reset,#help,#check{
+
+    border: 2px solid  brown;
+    border-radius: 20px;
+    background-color: beige;
+    color:brown;
+    font-weight: bold;
+    padding: 2px 30px;
+    margin-bottom: 5px;
+    
+}
+#game{
+    display: none;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.diceArea{
+    margin: 0px 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+body{   
+    color: brown !important;
+}
+
+label{
+    font-weight: bolder !important ;
+}
+
+input{
+    background-color: beige;
+    border: 2px solid brown;
+    width: 160px;
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+p{
+    font-size: medium;
+    font-weight: bolder;
+    color: brown;
+}
+
+span{
+    color: red;
+}
+
+img{
+    width: 270px;
+    background: transparent !important;
+}
+/* animation */
+
+@keyframes animation {
+    0%, 7% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(-15deg);
+    }
+    20% {
+        transform: rotateZ(10deg);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    30% {
+        transform: rotateZ(6deg);
+    }
+    35% {
+        transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+        transform: rotateZ(0);
+    }
+    }
+    
