@@ -1,0 +1,118 @@
+/*  
+        @author : Pal Patel - 000865048
+        I certify that this is my work.
+        Purpose : A website of a furniture retail store, a user can view items, add them to cart and remove it using ajax.
+        Professor: Sam Scott */
+
+
+#container {
+    margin: 10px;
+}
+
+#checkout{
+    text-align: center !important;
+}
+
+#total {
+    text-align: center;
+    border: none;
+    background-color: white;
+    padding-top: 20px !important;
+    color: brown;
+    font-weight: bolder;
+}
+#category{
+    list-style-type: none !important;
+}
+#cart {
+    padding-left: 30px;
+    margin: 0;
+}
+
+#btnnext {
+    text-align: right;
+    border: none !important;
+    background-color: white;
+    padding-top: 20px !important;
+}
+
+#btnprev {
+    border: none !important;
+    background-color: white;
+    padding-top: 20px !important;
+    text-align: left;
+}
+
+#outOfStock {
+    color: red;
+    font-weight: bolder;
+}
+
+
+table {
+    border-collapse: collapse;
+
+}
+
+td,
+th {
+    border: 2px solid black !important;
+}
+
+header {
+    text-align: center;
+    background-color: burlywood;
+}
+
+h1 {
+    height: 200px;
+    padding-top: 50px;
+    color: white;
+    font-size: 80px !important;
+}
+
+.logoImg {
+    max-width: auto;
+    max-height: 200px;
+
+}
+
+#logo {
+    max-width: auto;
+    max-height: 160px;
+    margin-top: 20px;
+}
+
+#category {
+    height: 450px;
+    padding-top: 0;
+    background-color: bisque;
+    color: brown;
+}
+
+#allProducts {
+    height: 390px;
+}
+
+
+a {
+    text-decoration: none !important;
+    color: brown !important;
+
+}
+
+h3 {
+    text-align: center;
+    color: brown;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.nav-item {
+    font-weight: bolder;
+    color: brown;
+}
+
+#lastRow {
+    background-color: none !important;
+}

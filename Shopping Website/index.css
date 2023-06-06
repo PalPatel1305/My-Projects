@@ -1,0 +1,128 @@
+/*
+    @author : Darshil Gajera - 000867069
+    I certify that this is my work.
+    Purpose : CSS for index.html
+    Professor: Sam Scott 
+
+*/
+
+html{
+    margin: 5px;
+}
+header {
+    background-color: #54A494;
+}
+.header_text {
+    position: relative;
+}
+h1 {
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#logo {
+    max-width: 80%;
+    justify-content: end;
+}
+
+.itemCategorymenu{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #54A494;
+}
+.itemCategorymenu div{
+    display: block;
+    margin: 5px;
+    background-color: #C5D0CE;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+.itemCategorymenu div:hover{
+    font-size: medium;
+    background-color: white;
+    color: #54A494;
+}
+.table a {
+    color: black;
+    text-decoration: none;
+}
+#move {
+    text-decoration: none;
+    width: 100%;
+    background-color: #54A494;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    padding: 10px;
+}
+#delete {
+    width: 20px;
+    height: 20px;
+}
+#checkout {
+    text-decoration: none;
+    width: 100%;
+    background-color: #54A494;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    padding: 10px;
+}
+.itemtable{
+    position: relative;
+}
+.nextprev {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+.nextprev button{
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    background-color: #54A494;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px;
+
+}
+.nextbtn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 25px;
+    
+}
+.prevbtn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.outstockmsg{
+    color: red;
+    font-weight: bold;
+}
+
+#backbtn{
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    background-color: #54A494;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+}
