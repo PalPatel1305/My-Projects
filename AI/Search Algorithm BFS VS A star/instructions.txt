@@ -1,0 +1,22 @@
+
+Pal Patel, 0000865048.
+
+The main focus of this assignment is to implement and compare two search algorithms: Depth-First Search (DFS) and Breadth-First Search (BFS). 
+The objective is to locate treasures in a grid-based environment. 
+The main goal is to assess and compare the selected search algorithm's performance to that of the offered A* algorithm.
+
+How to run:
+Requirements: Verify that your system has Python installed.
+Execution: Launch the 'best_path.py' document.
+Run: Just select "run" in Visual Studio Code's upper right corner to begin running the code. 
+
+Chosen Algorithm:
+BFS: The algorithm explores nodes level by level, expanding the search outward.
+It systematically explores all possible paths from the starting position until it finds the treasure, ensuring the shortest path found is the optimal one.
+
+Limitations:
+I don't find any limitation in BFS but it might encounter some limitations in complex grid configurations, which potentially affecting its efficiency.
+
+Comparisions:
+Comparison of Path Length: For the given goals, both algorithms found paths with similar lengths in all of cases.
+Exploration Efficiency: A* continuously explored fewer cells than BFS for all goals, because BFS uses a regular queue with no consideration other than 4 directions, whereas A* uses a priority queue where the data is prioritized by the cost of movement.

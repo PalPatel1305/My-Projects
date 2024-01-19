@@ -1,0 +1,23 @@
+(^hi|^hello|^greetings)
+(about|info.*|details?|explain|learn|define).*(LSC|(Learning|Learn)\sSup+ort\s(Centre|Center))|(is\s(LSC|(Learning|Learn)\sSup+ort\s(Centre|Center))){s<=1}
+(services|support|kind\sof\ssupport).*(it|they|LSC|(Learning|Learn)\sSup+ort\s(Centre|Center)){s<=1}
+(creat(e|ion)|set up|make|registe(r|ring|)){e<=1}.*(account|profile).*|.*(appointment|meeting).*(account|profile).*(create|set up|make){e<=1}
+(fr*ee|cost|money|pay|price){s<=1}.*(service|this)|(free|cost|money|pay|price){s<=1}
+.*(assistance|support|responsibilities|role|(offe(r|red|rs))|help.*with).*(teacher|(Peer.*tutor)).*|.*(teacher|(Peer|tutor)).*(assistance|responsibilities|role|(offe(r|red|rs))|help.*with){e<=1}
+(online|in[\s-]?person|virtual|physical|in[\s]?the[\s]?room){e<=1}
+(long|duration|length|time){e<=1}.*(appointmen(t|ts)){e<=1}
+((max|min)imum).*(wee(k|ly)).*(limit|reservation|boo(k|king)){s<=1}|(wee(k|ly)){e<=1}
+(advance|beforehand|prearrange|reserve){e<=1}.*(boo(king|ks|k)|appointment)|(boo(king|ks|k)|appointment).*(advance|beforehand|prearrange|reserve){e<=1}
+(locat(ion|ed|e)|directions|address|find){e<=1}.*(LSC|(Learning|Learn)\sSup+ort\s(Centre|Center))|(LSC|.*(Learning|Learn)\sSup+ort\s(Centre|Center)).*(locat(ion|ed|e)|directions|address|find).*|.*(locat(ion|ed|e)|directions|address){e<=1}
+(one(\-|\s)(on|to)(\-|\s)one|individual|group){e<=1}.*(sessions|tutoring)|(format|typ(e|es)).*(sessions|tutoring|appointment){e<=1}
+(attend|time|schedule|help|time\sslots){e<=1}.*(Math\sDrop\-in|math)|(Math\sDrop\-in|math).*(hours|time|schedule|help|time\sslots){e<=1}
+(eligibl(e|ility)|criteria|apply|requirements|qualifications|becom(e|ing)){e<=1}.*(peer\s(tuto(r|rs))){e<=1}
+(contact|reach|get\sin\stouch).*(LSC|(Learning|Learn)\sSup+ort\s(Centre|Center))|(contact|reach|get\sin\stouch){e<=1}
+((about|info.*|details?|explain|learn|tell|define).*(tuto(r\rs)|Peer\stuto(r|rs))){e<=1}| (tuto(r\rs)|Peer\stuto(r|rs))
+(mis(s|ses|sing)|show\sup).*(appointment|meeting){e<=1}
+(questio(n|ns)|inquire).*(other|other\sthan|not\srelated|related|non\-study|unrelated|outside).*(study|course|topics|coursework|program){e<=1}
+(boo(king|ks|k)|schedule|arrange|getting).*(tutor|teacher|appointmen(t|ts)){e<=1}
+(atten(d|ding)|joi(n|ning)|access|participating).*(appointment){e<=1}
+(cance(llation|ling|l)).*(policy|rule).*(appointment).*|.*(cance(llation|ling|l)).*|.*(cance(llation|ling|l)).*(appointmen(t|ts)|meetin(g|gs)){e<=1}
+(about|info.*|details?|explain|learn|tell|define).*(WCOnline)|(WCOnline){e<=1}
+((^By(e|e\sfor\snow)|^Farewell|^Later|^((See|Catch)\syou\slater)|(Take\scare)|See\sya)|goodbye|quit){s<=1}

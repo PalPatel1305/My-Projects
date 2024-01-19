@@ -1,0 +1,136 @@
+Hello                     
+hi
+greetings
+Answer: Hello! I know stuff about Learning Support Centre such as services offered, booking an appointment, length and timings of the appointment and related services. How can I help you?
+
+What is Learning Support Centre?
+Can you tell me about Learning Support Centers?
+Explain Learning Support Centre to me.
+Answer: Learning Support Centre at Mohawk College offers Peer tutoring Services whose primary focus is to provide tutoring in first year subjects, for academic purpose only. 
+
+
+What kind of support does the Learning Support Centre offer?
+Provide the services at the Learning Support Centre.
+Which services does the Learning Support Centre provide?
+Answer: Learning Support Centre offers Course Peer Tutoring, Maths support and Writing and Communication through virtual one to one sessions and group studies by the Tutors. 
+
+
+How to make an account to book an appointment?
+How do I create an account for an appointment?
+How to register for an account?
+Answer: Search WConline mohawk in google. Create an account. Make an account in WConline mohawk using your mohawk email.
+
+
+Is it a free service?
+How much does this service cost?
+Is this service free?
+Answer: Its totally a free service. Student can book 4 hours per week for Course Peer Tutor and 5 hours per week for writing and communication.
+
+
+Tell me about the support provided by Course Peer tutors.
+Explain the role of a Course Peer tutor.
+What help can a Course Peer tutor offer?
+Answer: Course Peer tutor offer content Review,clarification,practice problems and test Prep.
+
+
+Are the sessions available online or in-person?
+Can I choose between online and in-person sessions?
+Do they offer online sessions or In-person?
+Answer: The learning support centre offers both offer online sessions or In-persons meeting.
+
+
+How long one appointment will be?
+Can you tell me the length of one appointment?
+How much time does one appointment take?
+Answer: One appointment will be 50 minutes long.
+
+
+How many hours a student can book per week?
+What is the maximum weekly booking limit for students?
+How many hours can a student reserve each week?
+Answer: Student can book 4 hours per week for Course Peer Tutor and 5 hours per week for writing and communication.
+
+
+Does the student need to book the appointment in advance?
+Is advance booking required for student appointments?
+Do I need to reserve an appointment as a student?
+Answer: Students need to book an appointment 2 days in advance.
+
+
+Where is Learning Support Centre Located at Fennel Campus?
+Can you tell me the location of the Learning Support Centre at Fennel Campus?
+I need to find the Learning Support Centre's address at Fennel Campus.
+Answer: The learning support centre is at Room C122, Fennell Campus, near the scotia bank.
+
+
+Do they provide one-on-one sessions or group sessions at the learning support center?
+Can I get one-to-one tutoring or are there group sessions at the learning support centre?
+what is the different types of an appointment LSC offer?
+Answer: Learning Support Centre offers hybrid one to one sessions for almost all courses and group studies too depending on the course. 
+
+
+What are the Math Drop-in hours?
+Tell me the schedule for Math Drop-in.
+What time slot is available for Math Drop-in?
+Answer: Math drop-in support is available at the Fennell campus in C122 from 9am - 4pm Monday - Friday.
+
+
+Who can apply to become a peer tutor?
+Who is eligible to be a peer tutor?
+What are the criteria for becoming a peer tutor?
+Answer: The qualifications needed to apply for a peer tutor are the student must be currently enrolled in a Mohawk College program, a minimum Grade Point Average of 80% prior to and during the contract term and be willing to facilitate virtual tutoring through approved platforms as needed.
+
+
+Where do a student contact The LSC?
+How can a student reach out to The LSC?
+How do students get in touch with The LSC?
+Answer: Student can contact Lsc through mail via lsc@mohawkcollege.ca or 905-575-1212 x3279 or meet us at Room C122, Fennell Campus.
+
+
+Who serves as Peer tutors?
+Who are the Peer tutors?
+Can you tell me about Peer tutors?
+Answer: Peer Tutors are the Upper-year student leaders for your same course.
+
+
+What if a student miss an appointment?
+Can you tell me what to do if a student misses an appointment?
+How should a student handle missing an appointment?
+Answer: Appointments missed and not cancelled are considered a "No-Show" The LSC will suspend a student's account after 2 "No-Shows".
+
+
+Can I ask questions outside of the Study content?
+Can I ask questions not related to the course content?
+Are questions about non-study topics acceptable?
+Answer: Yes, but only the practice questions or similar content for that particular course.
+
+
+How to Book a Tutor?
+What is the process to book a tutor?
+Can you guide me on booking a tutor?
+Answer: In WCOnline mohawk, 1.Select a tutoring schedule from the "Schedules" menu above. 2. Under Display Options, select a course from the "Show All Course Options" drop down menu. 3. Select the time you would like to book by clicking on the white block. 4. Fill out the booking form. 5. Click Save Appointment, and your appointment will now appear in orange on the schedule.
+
+
+Walk me through attending an online appointment.
+I need guidance on joining an online appointment.
+How to Attend an Online Appointments?
+Answer: Log into WC Online and navigate to your appointment from the Welcome menu at the top of the screen. Select your appointment and click "Start Online Consultation.
+
+
+Please provide information on the appointment cancellation policy.
+Explain the policy for canceling appointments.
+What is the cancellation Policy for an appointment?
+Answer: Course Tutoring Appointments: You may cancel up to 24 hours before the start of your appointment. Saturday & Sunday appointments are to be cancelled by 4pm the Friday before. Writing/Communication & Study Skills Appointments: You may cancel up to 30 minutes before the start of your appointment.
+
+
+What is WCOnline?
+Can you provide information on WCOnline?
+I'd like to learn more about WCOnline.
+Answer: WCOnline is the website where all the appointments are booked for the sessions.
+
+
+See you later.
+Bye for now.
+GoodBye
+Answer:It was nice talking to you! Have a wonderful day! GoodBye!
+

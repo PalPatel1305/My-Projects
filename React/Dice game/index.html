@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <!-- Attaching the script for react and babel -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- Link to the css File -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </link>
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+    <!-- React script -->
+    <script type="text/babel">
+        // Dice Class Component 
+        // Return the dice item with the current side of the dice 
+        class Dice extends React.Component {
+            render() {
+                return (<div className="diceItem">
+                    {this.props.currentSide}
+                </div>)
+            }
+        };
+
+        // DiceGameFunctionality Class Component 
+        // Return the dice item with the current side of the dice 
+        class DiceGameFunctionality extends React.Component {
+
+            constructor(props) {
+                super(props);
+
+                //states
+                this.state =
+                {
+                    numOfDice: 1,
+                    diceElements: [{ key: 0, currentSide: 1 }],
+                    side: 6,
+                    keyID: 0,
+                };
+
+            }
+
+
+
+            //  Function MakeDice : Making new dice with current Side 1
+            makeDice() {
+                let dice = this.state.diceElements.slice();
+                dice.push({
+                    key: this.state.keyID + 1
+                    , currentSide: 1
+                });
+
+                // set the new diceElements with an additional diceItem in it and increase the key by 1
+                this.setState({ diceElements: dice });
+                this.setState({ keyID: this.state.keyID + 1 })
+            }
+
+            // Function increaseNumOfDice() will increase the num of dice by 1
+            increaseNumOfDice() {
+                this.setState({ numOfDice: this.state.numOfDice + 1 })
+                this.makeDice();
+            }
+
+
+            //Function resetDiceNumber() will reset the dice number to 1.
+            resetDiceNumber() {
+                this.setState({ numOfDice: 1 })
+                this.setState({ diceElements: [{ key: 0, currentSide: 1 }] });
+                this.setState({ keyID: 0 })
+            }
+
+            //Function increaseNumofSides() will increase the number of the sides by 1.
+            increaseNumofSides() {
+                let increasedSide = this.state.side + 1
+
+                this.setState({ side: increasedSide < 20 ? increasedSide : 20 })
+            }
+
+            //Function decreaseNumofSides() will decrease the number of the sides by 1.
+            decreaseNumofSides() {
+                let decreasedSide = this.state.side - 1;
+                //if the current side of any dice is greater than after decreasing the side 
+                //it will update the current side to the decreased side value
+                const updatedArray = this.state.diceElements.slice();
+                if (decreasedSide > 1) {
+                    for (let i = 0; i < this.state.numOfDice; i++) {
+                        if (decreasedSide < updatedArray[i].currentSide) {
+                            updatedArray[i].currentSide = decreasedSide;
+                        }
+                    }
+
+                }
+
+
+                this.setState({ side: decreasedSide >= 1 ? decreasedSide : 1, diceElements: updatedArray });
+
+            }
+            //Function Roll() will randomly generate the current side of the dice and display that
+            roll() {
+
+                let dice = [];
+                let totalDice = this.state.numOfDice;
+                let totalSides = this.state.side;
+                for (let i = 0; i < totalDice; i++) {
+                    let randomSide = Math.floor(Math.random() * totalSides) + 1;
+                    dice[i] = {
+                        key: i
+                        , currentSide: randomSide
+                    };
+                }
+                this.setState({ diceElements: dice });
+            }
+
+            // Render Function
+            render() {
+                // Making the dice array depending on the number of the dices given
+                let dices = [];
+                for (let i = 0; i < this.state.numOfDice; i++) {
+                    dices.push(
+                        // Onclick the currentside should increase by 1 
+                        <div onClick={() => {
+                            const updatedArray = this.state.diceElements.slice();
+                            if (this.state.side > updatedArray[i].currentSide) {
+                                updatedArray[i].currentSide += 1;
+                            } else {
+                                updatedArray[i].currentSide = 1;
+                            }
+                            this.setState({ diceElements: updatedArray });
+                        }} key={i}>
+                            {(<Dice key={this.state.diceElements[i].key} currentSide={this.state.diceElements[i].currentSide} />)}
+                        </div>
+                    );
+                }
+
+                return (
+                    <div>
+                        <header>
+                            <h1>Dice Game</h1>
+                        </header>
+                        <section>
+                            <div className="flex-container">
+                                <p>Number of Dice:<span onClick={this.increaseNumOfDice.bind(this)} >{this.state.numOfDice}</span> </p>
+
+                                <button onClick={this.resetDiceNumber.bind(this)}>Reset</button>
+                            </div>
+                        </section>
+                        <br />
+                        <br />
+                        <section>
+                            <div className="flex-container">
+                                <p>Number of Sides: <span>{this.state.side}</span> </p>
+                                <button onClick={this.increaseNumofSides.bind(this)}>Increase Sides</button>
+                                <button onClick={this.decreaseNumofSides.bind(this)}>Decrease Sides</button>
+                            </div>
+
+                        </section>
+
+                        <br />
+                        <br />
+                        <section>
+
+                            <div className="flex-container">
+                                <p>Roll the dices:</p>
+                                <button id="rollButton" onClick={this.roll.bind(this)}>Roll</button>
+                            </div>
+                        </section>
+                        <div className="diceContainer">
+                            {dices}
+                        </div>
+
+                        <hr />
+                        <footer>
+                            <p><strong> &copy; Pal Patel @Dice Game</strong> </p>
+                        </footer>
+                    </div>
+
+                )
+            }
+        };
+
+        //Rendering the DiceGameFunctionality Component
+        ReactDOM.render(<DiceGameFunctionality />, document.querySelector("#container"));
+    </script>
+
+</body>
+
+</html>

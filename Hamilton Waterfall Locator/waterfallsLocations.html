@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- "StAuth10244: I Pal Patel, 000865048 certify that this material is my original work. No other person's work has been used without due acknowledgement. I have not made my work available to anyone else." -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamilton WaterFalls</title>
+    <!-- Bootstrap CDN --->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- JavaScript link (including Popper.js and Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Css Styling -->
+    <style>
+        /* The height and width of the div will become the dimensions of the map! */
+        #map {
+            margin-top: 20px;
+            height: 500px;
+        }
+
+        footer, h5{
+            text-align: center;
+        }
+
+        h3 {
+            margin-top: 10px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Hamilton Waterfalls</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Waterfalls</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#filter">Filter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#geolocate">Your Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#geocode">Geocode</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap Container -->
+    <div class="container">
+        <div class="row">
+            <!-- For Responsive purpose -->
+            <div class="col-12">
+                <h2>Waterfalls By Ranks (A - Most Favourites):</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+        <br>
+
+        <!-- Filter group -->
+        <div id="filter" class="row center">
+            <h2>Filter by Ownership:</h2>
+            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                <button type="button" id="private" class="btn btn-outline-secondary">Private</button>
+                <button type="button" id="all" class="btn btn-outline-secondary">All</button>
+                <button type="button" id="public" class="btn btn-outline-secondary">Public</button>
+            </div>
+        </div>
+
+        <!-- GeoLocation -->
+        <div class="row center mt-5">
+            <h2>Get your Current Location in the map: </h2>
+            <button type="button" id="geolocate" class="btn btn-outline-secondary">GeoLocation</button>
+        </div>
+
+        <!-- Geocode -->
+        <div class="row center mt-5">
+            <h2>Enter the address(GeoCode):</h2>
+            <div class="input-group mb-3">
+                <input type="text" id="address" class="form-control" placeholder="Address(Street/City/Province)"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="geocode">GeoCode</button>
+            </div>
+            <span id="coords" style="font-size:22px;"></span>
+        </div>
+
+        <!-- Directions -->
+        <div class="row center mt-3">
+            <h2>Get Directions</h2>
+
+            <h3>From:</h3>
+            <select id="fromLocation" class="form-select" aria-label="Default select example">
+                <option value="Home" selected>Your location</option>
+            </select>
+            <h3>To:</h3>
+            <select id="toLocation" class="form-select" aria-label="Default select example">
+                <option value="Home" disabled>Your location</option>
+            </select>
+            <button class="btn btn-outline-secondary mt-4 mb-5" type="button" id="directions"> Get directions</button>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p><strong> &copy; Pal Patel @Hamilton Waterfalls</strong> </p>
+        </footer>
+
+    </div>
+
+    <!-- Linked Google Maps with google APi Key -->
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBS_9GNjY3kfN5bYrwl2fq9p52U8Dhts7k&callback=initMap">
+        </script>
+    <!-- Linked the data script to load the data -->
+    <!-- https://open.hamilton.ca Took the data from this datasource -->
+    <script src="waterfalls.js"></script>
+
+    <script>
+
+        // Dropdowns for directions
+        var fromSelectDropdown = document.getElementById("fromLocation");
+
+        var toSelectDropdown = document.getElementById("toLocation");
+        //Disabling the Your Location option from toSelectedDropdown if Your Location is selected in the FromSelectedDropdown
+        fromSelectDropdown.addEventListener("change", () => {
+            var selectedfromValue = fromSelectDropdown.value;
+            // homeoption in toselectDropdown
+            var homeOption = toSelectDropdown.querySelector("option[value='Home']");
+
+            if (selectedfromValue === "Home") {
+                homeOption.disabled = true;// Disable the "Home" option in the second dropdown
+                //Selecting another option
+                toSelectDropdown.options[1].selected = true;
+            } else {
+                homeOption.disabled = false; // Enable the "Home" option
+            }
+        });
+
+        //To store the markers
+        var markers = [];
+        function initMap() {
+            //Initializing the map
+            map = new google.maps.Map(document.getElementById("map"),
+                {
+                    center: { lat: 43.24215969, lng: -79.8286771 },
+                    zoom: 11.5,
+                });
+
+            // putting the markers as per the location of waterfalls
+            for (i = 0; i < waterfalls.length; i++) {
+                // setting the icon based on the category of thr Ranking
+                if (waterfalls[i].RANKING == "A")
+                    newIcon = "http://maps.google.com/mapfiles/kml/pal5/icon56l.png";
+                else if (waterfalls[i].RANKING == "B")
+                    newIcon = "http://maps.google.com/mapfiles/kml/pal5/icon49l.png";
+                else if (waterfalls[i].RANKING == "C")
+                    newIcon = "http://maps.google.com/mapfiles/kml/pal5/icon58l.png";
+                else
+                    newIcon = "waterfall.png";
+                // creating the marker based on the array in the waterfalls.js file
+                newMarker = new google.maps.Marker({
+                    position: {
+                        lat: waterfalls[i].LATITUDE,
+                        lng: waterfalls[i].LONGITUDE
+                    },
+                    title: waterfalls[i].NAME,
+                    icon: newIcon
+                });
+
+                // putting the marker onto the map
+                newMarker.setMap(map);
+
+
+                //------------------------------------InfoWindow--------------------------------------------
+
+                var openInfoWindow = null;
+                // content string for the infowindow.
+                newMarker.contentString =
+                    "<h3>" + waterfalls[i].NAME + "</h3>" +
+                    "<p> Community: " + waterfalls[i].COMMUNITY +
+                    "<br> Type: " + waterfalls[i].TYPE +
+                    "<br>OwnerShip: " + waterfalls[i].OWNERSHIP
+                    + "<br> Access From: " + waterfalls[i].ACCESS_FROM +
+                    "</p>";
+
+                // creating the infowindow
+                const infowindow = new google.maps.InfoWindow({
+                    content: this.contentString,
+                });
+
+                newMarker.addListener("click", function () {
+                    // Close previously opened infowindow
+                    if (openInfoWindow !== null) {
+
+                        openInfoWindow.close();
+                    }
+                    infowindow.setContent(this.contentString);
+                    infowindow.open(map, this);
+                    openInfoWindow = infowindow;
+                })
+
+                // Setting the markers some properties and pushing them in to an array
+                newMarker.NAME = waterfalls[i].NAME;
+                newMarker.OWNERSHIP = waterfalls[i].OWNERSHIP;
+                markers.push(newMarker);
+
+                // Filling out the Dropdowns for directions with waterfall name
+                const option = document.createElement("option");
+                option.text = waterfalls[i].NAME;
+
+                //setting the value as their longitude and lattitude so can be directly used for directions
+                option.value = JSON.stringify({
+                    lat: waterfalls[i].LATITUDE,
+                    lng: waterfalls[i].LONGITUDE
+                });
+
+                toSelectDropdown.appendChild(option);
+                // Appending the copy of the option.
+                fromSelectDropdown.appendChild(option.cloneNode(true));
+
+                // Selecting the First element in the dropdown because of the your location in the fromdropdown and yourlocation in toDropDown
+                toSelectDropdown.options[1].selected = true;
+            }
+
+            //----------------------------------------------- geocoder service object ----------------------------------------------------------
+            geocoder = new google.maps.Geocoder();
+
+            //-------------------------------------- services objects used to provide directions--------------------------------------------------------
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+
+        }
+
+
+        //---------------------------------------------------------------Filter------------------------------------------------------------------
+        //  Filter the Private WaterFalls among all
+        function filterPrivateWaterfalls() {
+            map.setCenter({ lat: 43.24215969, lng: -79.8286771 });
+            for (i = 0; i < markers.length; i++) {
+                if (markers[i].OWNERSHIP === "private")
+                    markers[i].setMap(map);
+                else
+                    markers[i].setMap(null);
+            }
+            //going back to map to see the results
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.getElementById("private").onclick = filterPrivateWaterfalls;
+        //  Filter the Public WaterFalls among all
+        function filterPublicWaterfalls() {
+            map.setCenter({ lat: 43.24215969, lng: -79.8286771 });
+            for (i = 0; i < markers.length; i++) {
+                if (markers[i].OWNERSHIP === "public")
+                    markers[i].setMap(map);
+                else
+                    markers[i].setMap(null);
+            }
+            //going back to map to see the results
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.getElementById("public").onclick = filterPublicWaterfalls;
+
+
+        // ShowingAll
+        function showAllWaterfalls() {
+            map.setCenter({ lat: 43.24215969, lng: -79.8286771 });
+            for (i = 0; i < markers.length; i++) markers[i].setMap(map);
+            //going back to map to see the results
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.getElementById("all").onclick = showAllWaterfalls;
+
+
+        //--------------------------------------------------------------Geolocate-------------------------------------------------------------------
+
+
+        function showPositionOnMap(position) {
+            // create a marker centered at the user's location
+            userLocation = new google.maps.Marker({
+                position: {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                },
+                title: "Home",
+                icon: "https://maps.google.com/mapfiles/kml/pushpin/wht-pushpin.png"
+            });
+
+            // putting the marker onto the map
+            userLocation.setMap(map);
+
+            //going back to map to see the results
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.getElementById("geolocate").onclick = function () {
+            navigator.geolocation.getCurrentPosition(showPositionOnMap);
+        }
+
+        //----------------------------------------------Address--------------------------------------------------
+        function codeAddress() {
+
+            var address = document.getElementById('address').value;
+
+            geocoder.geocode({ 'address': address }, function (results, status) {
+
+                if (status == 'OK') {
+
+                    // center the map at the location
+                    map.setCenter(results[0].geometry.location);
+
+                    // putting the latitude and longitude on the page as text
+                    document.getElementById("coords").innerHTML =
+                        "Coordinates of " + address + " is: " +
+                        results[0].geometry.location.lat() + ", " +
+                        results[0].geometry.location.lng();
+
+                    // put a marker on the map at the given position
+                    marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location,
+                        icon: "https://maps.google.com/mapfiles/kml/pushpin/wht-pushpin.png"
+                    });
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+            // Cleaning up the address Field
+            document.getElementById('address').value = "";
+            //going back to map to see the results
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        // call the codeAddress function when the geolocate button is clicked
+        document.getElementById("geocode").onclick = codeAddress;
+
+
+        //--------------------------------------------Directions--------------------------------------------------
+
+        function getDirections() {
+            // const selectElement = document.getElementById("yourSelectId");
+            let fromselectedValue = fromSelectDropdown.value;
+            let toselectedValue = toSelectDropdown.value;
+            let request = {}
+            // If any selected value is The User's Own Location Then get the geolocation position
+            if (fromselectedValue == "Home" || toselectedValue == "Home") {
+                navigator.geolocation.getCurrentPosition(function (position) {
+
+                    userLocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    // Making a request parameter to be passed in the directionSerice
+                    request = {
+
+                        origin: fromselectedValue == "Home" ? userLocation : JSON.parse(fromselectedValue),
+                        destination: toselectedValue == "Home" ? userLocation : JSON.parse(toselectedValue),
+                        travelMode: 'DRIVING'
+                    };
+                    directionsService.route(request, function (result, status) {
+                        if (status == 'OK') {
+                            directionsRenderer.setDirections(result);
+                            console.log(result);
+                        }
+                    });
+
+
+                });
+
+            } else {
+                //If neither of them is The user location
+                request = {
+
+                    origin: JSON.parse(fromselectedValue),
+                    destination: JSON.parse(toselectedValue),
+                    travelMode: 'DRIVING'
+                };
+                directionsService.route(request, function (result, status) {
+                    if (status == 'OK') {
+                        directionsRenderer.setDirections(result);
+                        console.log(result);
+                    }
+                });
+            };
+
+            //going back to map to see the results
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.getElementById("directions").onclick = getDirections;
+
+
+    </script>
+
+</body>
+
+</html>
